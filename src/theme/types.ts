@@ -5,6 +5,7 @@ export type ColorScheme = {
   textSecondary: string;
   link: string;
   border: string;
+  buttonText: string;
 };
 
 export type NotificationColorScheme = {
