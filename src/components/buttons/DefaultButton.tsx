@@ -1,6 +1,7 @@
 import { useTheme } from '@hooks';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Pressable, StyleSheet } from 'react-native';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { ButtonProps } from './types';
 
 export const DefaultButton: React.FC<ButtonProps> = ({
@@ -15,10 +16,25 @@ export const DefaultButton: React.FC<ButtonProps> = ({
     container: { backgroundColor: theme.info, opacity: isDisabled ? 0.5 : 1 },
   };
 
+  const opacity = useSharedValue(+!!isDisabled);
+
+  useEffect(() => {
+    opacity.value = withTiming(isDisabled ? 0.75 : 1, { duration: 300 });
+  }, [isDisabled]);
+
+  const rStyles = useAnimatedStyle(() => ({
+    opacity: opacity.value,
+  }));
+
   return (
-    <Pressable onPress={onPress} style={[styles.container, localStyles.container, containerStyles]}>
-      {children}
-    </Pressable>
+    <Animated.View style={rStyles}>
+      <Pressable
+        onPress={onPress}
+        style={[styles.container, localStyles.container, containerStyles]}
+      >
+        {children}
+      </Pressable>
+    </Animated.View>
   );
 };
 
