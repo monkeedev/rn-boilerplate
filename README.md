@@ -25,7 +25,7 @@ All folders placed in `src` and related to specified needs:
 - `hooks` - project hooks
 - `navigation` - navigators placed here
 - `redux` - RTK folder
-- `screns` - project screens
+- `screens` - project screens
 - `theme` - colors, font sizes, etc.
 - `utils` - constants, functions, types, etc.
 
