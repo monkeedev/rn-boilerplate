@@ -28,3 +28,7 @@ All folders placed in `src` and related to specified needs:
 - `screns` - project screens
 - `theme` - colors, font sizes, etc.
 - `utils` - constants, functions, types, etc.
+
+## Example
+
+Check [this repo](https://github.com/monkeedev/rn-boilerplate-example)
