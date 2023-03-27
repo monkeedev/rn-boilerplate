@@ -6,7 +6,7 @@ TypeScript based custom React Native project boilerplate with a folder structure
 
 ## Installation
 
-Run this command to initialize boilerplated project
+Run this command to initialize boilerplated project:
 
 `npx react-native init SomeApp --template https://github.com/monkeedev/rn-boilerplate.git`
 
