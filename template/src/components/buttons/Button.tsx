@@ -4,7 +4,7 @@ import { Pressable, StyleSheet } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { ButtonProps } from './types';
 
-export const DefaultButton: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   onPress,
   containerStyles,
   children,

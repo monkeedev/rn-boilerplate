@@ -13,7 +13,7 @@ const Item: React.FC<ListItem> = ({ title }) => {
   );
 };
 
-export const DefaultList: React.FC<ListProps> = ({ data }) => {
+export const List: React.FC<ListProps> = ({ data }) => {
   return (
     <FlatList
       data={data}

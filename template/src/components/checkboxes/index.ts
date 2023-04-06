@@ -1,2 +1,2 @@
-export * from './DefaultCheckbox';
-export * from './SwitcherCheckbox';
+export * from './Checkbox';
+export * from './Switcher';

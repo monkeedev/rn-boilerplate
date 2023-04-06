@@ -14,7 +14,7 @@ import {
 import { InputHandlers, InputProps, KeyboardTypeEnum } from './types';
 
 const Component: React.FC<InputProps> = (props) => {
-  const inputRef = useRef<TextInput>();
+  const inputRef = useRef<TextInput>(null);
   const timerRef = useRef<NodeJS.Timer>();
   const valueRef = useRef('');
   const { theme } = useTheme();
